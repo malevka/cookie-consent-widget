@@ -1,0 +1,94 @@
+
+.ccw-wrapper {
+  --ccw-container-bg: #252629;
+  --ccw-container-height: 150px;
+
+  --ccw-content-color: #f0f2f5;
+  --ccw-content-fs: 1rem;
+
+  --ccw-link-color: #00985f;
+  --ccw-link-fs: 1rem;
+
+  --ccw-button-bg: #00985f;
+  --ccw-button-hover-bg: #007549;
+  --ccw-button-color: #ffffff;
+  --ccw-button-fs: 1rem;
+
+  box-sizing: border-box;
+  position: fixed;
+  top:0 ;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index:99999;
+}
+
+.ccw-container {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
+
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: var(--ccw-container-height);
+  padding: 0 60px 16px 44px;
+  background-color: var(--ccw-container-bg);
+
+}
+
+@media (max-width: 767px){
+  .ccw-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1279px) {
+  .ccw-container {
+    padding-inline: 16px 32px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .ccw-container {
+    padding-inline: 24px 40px ;
+  }
+}
+
+
+.ccw-content {
+  margin: 16px 0 0 16px;
+  color: var(--ccw-content-color);
+  font-size: var(--ccw-content-fs);
+}
+
+
+.ccw-link {
+  color: var(--ccw-link-color);
+  font-size: var(--ccw-link-fs);
+}
+
+.ccw-button {
+  width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+
+  white-space: nowrap;
+  border-width: 0;
+  border-style: solid;
+  font-weight: 900;
+  line-height: 1.25;
+  border-radius: 8px;
+  margin: 16px 0 0 16px;
+  padding: 14px 12px;
+  cursor: pointer;
+
+  background-color: var(--ccw-button-bg);
+  color: var(--ccw-button-color);
+  font-size: var(--ccw-button-fs);
+}
+.ccw-button:hover {
+  background-color: var(--ccw-button-hover-bg);
+}
